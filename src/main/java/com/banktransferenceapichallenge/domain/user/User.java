@@ -34,5 +34,5 @@ public class User {
     private String password;
     private BigDecimal balance;
     @Enumerated(EnumType.STRING)
-    private com.banktransferenceapichallenge.domain.user.UserType userType;
+    private UserType userType;
 }
