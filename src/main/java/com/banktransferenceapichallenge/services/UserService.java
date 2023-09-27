@@ -1,12 +1,14 @@
 package com.banktransferenceapichallenge.services;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.banktransferenceapichallenge.domain.user.User;
 import com.banktransferenceapichallenge.domain.user.UserType;
+import com.banktransferenceapichallenge.dtos.UserDTO;
 import com.banktransferenceapichallenge.repositories.UserRepository;
 
 @Service
@@ -29,5 +31,15 @@ public class UserService {
 
     public void saveUser(User user) {
         this.repository.save(user);
+    }
+
+    public User createUser(UserDTO data) {
+        User newUser = new User(data);
+        this.saveUser(newUser);
+        return newUser;
+    }
+
+    public List<User> getAllUsers() {
+        return this.repository.findAll();
     }
 }
