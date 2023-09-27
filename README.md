@@ -33,3 +33,5 @@ POST /transaction
     "payee" : 15
 }
 ```
+
+Projeto realizado seguindo um mini-curso no Youtube
