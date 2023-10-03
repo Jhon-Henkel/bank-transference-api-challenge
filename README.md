@@ -34,4 +34,30 @@ POST /transaction
 }
 ```
 
-Projeto realizado seguindo um mini-curso no Youtube
+Projeto realizado seguindo um mini-curso no Youtube (https://www.youtube.com/watch?v=QXunBiLq2SM)
+
+### Endpoints desenvolvidos
+
+- POST /users
+    ```json
+    {
+        "firstName": "Name",
+        "lastName": "LastName",
+        "document": "00000000000",
+        "email": "email@mail.com",
+        "userType": "COMMON",
+        "password": "12345678",
+        "balance": 10 
+    }
+    ```
+
+- GET /users
+
+- POST /transactions
+    ```json
+    {
+        "senderId": 1,
+        "receiverId": 2,
+        "value": 10
+    }
+    ```
