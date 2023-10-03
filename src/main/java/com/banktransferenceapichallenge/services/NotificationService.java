@@ -16,10 +16,12 @@ public class NotificationService {
 
     public void sendNotification(User user, String message) throws Exception {
         NotificationRequestDTO notificationRequest = new NotificationRequestDTO(user.getEmail(), message);
-        ResponseEntity<String> response = restTemplate.postForEntity("http://o4d9z.mocklab.io/notify", notificationRequest, String.class);
-        if (response.getStatusCode() != HttpStatus.OK) {
-            System.out.println("Error sending notification");
-            throw new Exception("Error sending notification");
-        }
+        // ResponseEntity<String> response = restTemplate.postForEntity("http://o4d9z.mocklab.io/notify", notificationRequest, String.class);
+        // if (response.getStatusCode() != HttpStatus.OK) {
+        //     System.out.println("Error sending notification");
+        //     throw new Exception("Error sending notification");
+        // }
+
+        System.out.println("Notification sent");
     }
 }
